@@ -1,0 +1,178 @@
+popup.export#export
+	.wrapper
+		.content
+			button.popup__close._icon-close(data-close="data-close", type="button")
+			img(src="/public/expochat/img/pop-ups/popup-1.svg?_v=20220920212312", alt="")
+			.popup__body
+				h3 Export all your chats
+				span Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi perspiciatis neque minus aliquam cumque architecto necessitatibus exercitationem a dolorum? Eveniet blanditiis maiores dolore in quam tempora delectus atque numquam iure!</span>
+				button.button._fw Export chats
+
+popup.alarm#alarm
+	.wrapper
+		.content.grey
+			button.popup__close._icon-close(data-close="data-close", type="button")
+			img(src="/public/expochat/img/pop-ups/popup-2.svg?_v=20220920212312", alt="")
+			.popup__body
+				h3 Attention
+				.inner
+					span.text Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+				.buttons
+					button.button(data-close="data-close") Agree
+					button.button.button-border(data-close="data-close") Cancel
+
+popup.copy#company
+	.wrapper
+		.content
+			.popup__close._icon-close(data-close="data-close", type="button")
+			img(src="/public/expochat/img/pop-ups/popup-1.svg?_v=20220920212312", alt="")
+			.popup__body
+				h3 Link copy to clipboard
+				button.button._fw(data-close="data-close") Ok
+
+popup.invite#invite
+	.wrapper
+		.content
+			button.popup__close._icon-close(data-close="data-close", type="button")
+			.popup__body
+				.qrcode
+				h4 Show QR to invite a collegue to chat
+			small(style="display:none") Copied
+			button.button#invite-link Copy link
+
+popup.invite#team
+	.wrapper
+		.content
+			button.popup__close._icon-close(data-close="data-close", type="button")
+			.popup__body
+				.qrcode
+				h4 Show QR to invite a collegue to team
+			small(style="display:none") Copied
+			button.button#team-link Copy link
+
+popup#waiting.waiting
+	.wrapper
+		.content
+			button.popup__close._icon-close(data-close="data-close" type="button")
+			img(src="/public/expochat/img/pop-ups/popup-5.svg?_v=20221201161955" alt="")
+			.popup__body
+				p Waiting for approval.
+				<br>
+					| Contact any member of your team
+				h2 All 
+				ul.team-list.teamList.scroll-x
+					li
+						avatar(style="background-image:url(https://cdn.meyou.id/pics/Rattlesnake.png); background-color: #3366FF;")
+						name(data-uid="111")
+						button.button._fw Decline
+
+popup#introduce.introduce.active
+	.wrapper
+		.content
+			.text To join team write your name
+			.popup__body
+				include components/_molecule
+				h2 All 
+				ul.team-list.scroll-x.teamList
+					li
+						avatar(style="background-image:url(https://cdn.meyou.id/pics/Rattlesnake.png); background-color: #3366FF;")
+						name(data-uid="111")
+					li
+						avatar(style="background-image:url(https://cdn.meyou.id/pics/Rattlesnake.png); background-color: #3366FF;")
+						name(data-uid="111")
+				.buttons
+					button.button Accept
+					button.button.button-border Decline 
+
+popup#photos.photos
+	.wrapper
+		.content
+			button.popup__close._icon-close(data-close="data-close" type="button")
+			.top-header
+				img(src="/public/expochat/img/logo.svg" alt="logo")
+				.event-name
+					h2
+					span
+			.popup__body
+				.swiper.vertical
+					.swiper-wrapper
+						.qr-wrapper.swiper-slide
+							.qr.copyIt(data-title="")
+							small exhibitor
+						.swiper-slide
+							.swiper.horisontal
+								.swiper-wrapper
+						.qr-wrapper.swiper-slide
+							small visitor
+							.qr.copyIt(data-title="")
+
+popup#photo.active
+	.wrapper
+		.content
+			button.popup__close._icon-close(data-close='data-close' type='button')
+			.popup__body
+				img(src='<%=pic%>' alt='')
+
+popup#cropper.photos
+	.wrapper
+		.content
+			button.popup__close._icon-close(data-close='data-close' type='button')
+			.popup__body
+				article.content
+					img#cropperImage(src='')
+				.options
+					button._mini._icon-cross(data-id='cancel' data-close='data-close')
+					button._mini._icon-undo(data-id='rotate-left')
+					.form-field
+						label(for='upl-img') Upload new
+						input#upl-img(type='file' name='upl-img' accept='.jpg, .jpeg, .png')
+					button._mini._icon-redo(data-id='rotate-right')
+					button._mini._icon-checkmark(data-id='ok')
+
+popup#mergeBox.introduce
+	.wrapper
+		.content
+			.popup__body
+				h2 Merge these people into a team?
+				.form-field
+					label(for='team-name') Team name
+					input#team-name(autocomplete='off' type='text' name='team-name' placeholder='')
+				ul.photos-list
+				.buttons
+					button.button Accept
+					button.button.button-border Reject
+
+popup#progress.copy
+	.wrapper
+		.content
+			.popup__body
+				h2 Uploading, please wait..
+				div
+					i
+				span
+				button.button._fw Abort
+
+popup#edit.introduce
+	.wrapper
+		.content
+			.popup__body
+				.fiels
+					.form-field
+						label(for='user-name') Your name
+						input#user-name(autocomplete='off' type='text' name='name' placeholder='Member 001')
+					.form-field
+						label(for='user-company') Your company
+						input#user-company(autocomplete='off' type='text' name='company' placeholder='Company 001')
+					.buttons
+						button.button.button-black(data-close='close') Cancel
+						button.button.save Save
+
+popup#error.error
+	.wrapper
+		.content
+			button.popup__close._icon-close(data-close='data-close' type='button')
+			.popup__body
+				span There seems to be no internet connection.
+					br
+					|  Check the connection
+				img(src='/public/expochat/img/pop-ups/popup-3.svg' alt='')

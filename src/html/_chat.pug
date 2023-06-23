@@ -1,0 +1,261 @@
+section#chat(data-section="chat")
+	.chat 
+		.header
+			span._icon-arrow-left(data-back='chat' data-open='chats')
+			.header-text
+				avatar(style='background-image:url(./img/avatars/avatar-1.png)')
+				avatar(style='background-image:url(./img/avatars/avatar-1.png)')    
+				.name Dentsu team chat
+			span._icon-options(data-button='chat-options')
+			
+		.message-options#tc_block(style="display: none")
+			#tc_reply
+				i._icon-reply
+				| Reply
+			#tc_sensored
+				i._icon-bin
+				| Delete
+			#tc_report
+				i._icon-report
+				| Report
+		
+		.chat-history#chat-history
+
+			ul.content
+
+				li.system-message
+					time Friday, 18/09/22
+				li.user-message
+					.message
+						avatar(style="background-image:url(./img/avatars/avatar-1.png)")
+						span
+							i._icon-arrow-down
+						name Andrew Paymei
+						| Hello, how can I help you?
+				li.my-message
+					.message
+						span Hello. I would like to stay at your hotel.
+				li.user-message
+					.message
+						avatar(style="background-image:url(./img/avatars/avatar-1.png)")
+						span
+							i._icon-arrow-down
+						name Andrew Paymei
+						| Have you booked the room in advance?
+				li.my-message 
+					.message
+						span No, but I hope you will find something for me.
+				li.user-message 
+					.message
+						avatar(style="background-image:url(./img/avatars/avatar-1.png)")
+						span
+							i._icon-arrow-down
+						name Andrew Paymei
+						| Now I'll look. So ... We have several free rooms. There is a suite, there is a single standard and a double economy</span>
+				li.my-message
+					.message
+						span And what is the cost of the rooms?
+				li.system-message
+					time Sunday, 19/09/22
+				li.system-message
+					.vcard
+						button.button Request contact 
+						img(src="img/profile/card-1.jpg?_v=20230308150414", alt="vcard")
+				li.user-message
+					.message-reply
+						.name Ivanov Ivan
+							span Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					.message
+						span
+							i._icon-arrow-down
+						name Andrew Paymei
+						| The suite costs $ 30 per night
+					.message-reply
+						.name Ivanov Ivan
+							span Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					.message
+						avatar(style="background-image:url(./img/avatars/avatar-1.png)")
+						span
+							i._icon-arrow-down
+						name Andrew Paymei
+						| The "Standard" room - $ 20 per night, and the "Economy" for two - $ 15 per person.
+				li.system-message
+					span Andrea joined the group
+					.btns
+						button.accept Accept
+						button.decline Decline
+				li.system-message.confirmed
+					span Andrea joined the group
+				li.user-message
+					.message
+						span
+							i._icon-arrow-down
+						name Andrew Paymei
+						| The suite costs $ 30 per night
+					.message
+						span
+							i._icon-arrow-down
+						name Andrew Paymei
+						| The suite costs $ 30 per night
+					.message
+						span
+							i._icon-arrow-down
+						name Andrew Paymei
+						| The suite costs $ 30 per night
+					.message
+						avatar(style="background-image:url(./img/avatars/avatar-1.png)")
+						span
+							i._icon-arrow-down
+						name Andrew Paymei
+						| The suite costs $ 30 per night
+				li.my-message
+					.message
+						span Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							a(href="img/chat/file-2.png", download="download", target="_blank") 
+								img(src="img/chat/file-2.png?_v=20230308150414", alt="")
+				li.my-message
+					.message-reply
+						.name Ivanov Ivan
+							span Lorem ipsum dolor sit amet consectetur adipisicing elit
+					.message
+						span I would like to have a single room.
+					.message
+						span I do not want to live with a stranger. I'll take the room for $ 30.
+					i.status
+
+			ul.openers.scroll-x
+				li(data-num="0")
+					div
+						span.text Opener 1
+						span._icon-edit
+				li
+					button#chatInvite Invite collegue
+				li(data-num="1")
+					div
+						span.text Opener 2
+						span._icon-edit
+				li
+					div.wa
+						img(src="/public/expochat/img/chat/wa.png", alt="")
+						span.text(data-phone="") my whatsapp: 89999999999
+						span._icon-edit
+				li(data-num="3")
+					div
+						span.text Opener 3
+						span._icon-edit
+			.footer
+				#toEnd.hidden(data-count="0")
+					i._icon-arrow-down
+					.file(style="display: none")
+						i._icon-bin
+						.file-inner
+							name file-1.png
+				.reply
+					i._icon-bin
+					.reply-inner
+						.name
+							name Ivanov Ivan
+							| Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				
+				ul.tags.teamList(style="display: none")
+					li
+						avatar(data-uid="jDXgNNT6VpVpNyNHDaG5gKuWEX75Y1Db", style="background-image:url(https://cdn.meyou.id/pics/Nautilus.png); background-color: #0099CC;")
+						name(data-uid="111")
+					li
+						avatar(data-uid="jDXgNNT6VpVpNyNHDaG5gKuWEX75Y1Db", style="background-image:url(https://cdn.meyou.id/pics/Nautilus.png); background-color: #0099CC;")
+						name(data-uid="111")
+
+				.footer-inner 
+					.textarea-wrapper
+						//- textarea(id="message-to-send", name="message-to-send", placeholder="Type your message", rows="1")
+						#message-to-send(contenteditable="true", aria-multiline="true", role="textbox")
+						input#add-file(type="file", name="file", accept=".jpg, .jpeg, .png, .webp, .gif")
+						label._icon-file(for="add-file")
+					span._icon-send#send-message
+					span#loader(style="display: none;")
+						img(src="img/chat/loader.svg", alt="")
+
+			.chat-options#chat-options
+				.header
+					span._icon-arrow-left(data-close="chat-options")
+				.body
+					h2 Morally-grounded Company 2833 team chat
+					//- ul
+					//- 	li
+					//- 		i._icon-company
+					//- 		.name
+					//- 			h4 Team
+					//- 				span Username
+					//- 		span.rename._icon-edit#remane-team-chat(data-button="rename-chat")
+					ul
+						li(disabled="disabled")
+							i._icon-export
+							.name
+								h4 Export team chats & contacts (Pay) 
+									span (100)
+						li
+							i._icon-export 
+							.name
+								h4 Save my chats & contacts to continue after expo
+						li
+							i._icon-login 
+							.name
+								h4 Log In
+						li(data-button="business-cards")
+							i._icon-file 
+							.name
+								h4 Business cards
+						li(data-button="pre-buttons")
+							i._icon-edit
+							.name
+								h4 Edit pre-buttons
+
+					h3 All company team
+						span (2) 
+					ul.teamList.withDelete
+						li.addToTeam
+							i._icon-adduser
+							.name
+								span Invite member
+						li
+							avatar(data-uid="111", style="background-image:url(https://cdn.meyou.id/pics/Rattlesnake.png); background-color: #3366FF;")
+							name(data-uid="111")
+							i._icon-bin.removeFromTeam
+
+			.chat-options#rename-chat 
+				.header
+					span._icon-arrow-left(data-option="rename-chat")
+				.body
+					ul
+						li
+							input#team-name(type="text", name="team-name", placeholder="team name", value="Dentsu")
+						li
+							.input-desc Company name
+					button.button.button-black._fw#save-team-name Save 
+			
+			.chat-options#business-cards
+				.header
+					span._icon-arrow-left(data-option="business-cards")
+				.body
+					h3 All team business cards 
+						span (4)
+					.all-bc
+						img(src="/public/expochat/img/profile/card-1.jpg?_v=20220920212312", alt="vcard")
+						img(src="/public/expochat/img/profile/card-1.jpg?_v=20220920212312", alt="vcard")
+						img(src="/public/expochat/img/profile/card-1.jpg?_v=20220920212312", alt="vcard")
+
+			.chat-options#pre-buttons
+				.header
+					span._icon-arrow-left(data-option="pre-buttons")
+				.body
+					ul
+						li
+							input#team-name(type="text", name="team-name", placeholder="new pre-button", value="Send me price")
+						li
+							input#team-name(type="text", name="team-name", placeholder="new pre-button", value="Waiting your email")
+							i._icon-bin
+						li
+							input#team-name(type="text", name="team-name", placeholder="new pre-button", value="")
+							i._icon-bin
+					button.button.button-circle._icon-plus
+					button.button.button-black._fw#save-team-name Save

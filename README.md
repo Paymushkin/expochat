@@ -1,1 +1,1 @@
-# expochat
+# expochat-gpt
