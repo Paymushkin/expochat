@@ -47,7 +47,6 @@ popup {
 	}
 
 	.wrapper {
-		display: -ms-flexbox;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -59,7 +58,6 @@ popup {
 	}
 
 	.content {
-		display: -ms-flexbox;
 		display: flex;
 		flex-direction: column;
 		visibility: hidden;
@@ -202,6 +200,8 @@ popup {
 			font-size: rem(16);
 		}
 
+		molecule,
+		.molecule,
 		.molecule-wrapper {
 			margin: rem(40) 0 rem(20);
 			z-index: 2;
@@ -224,38 +224,37 @@ popup {
 				opacity: 0;
 				cursor: pointer;
 			}
+		}
 
-			.photos-list {
-				display: flex;
-				flex: 1 1 auto;
-				justify-content: center;
-				align-items: flex-start;
-				flex-wrap: wrap;
-				gap: 0.3125rem;
-				margin: 0.625rem 0;
-				padding: 0.625rem 0;
-				overflow-y: auto;
+		.photos-list {
+			display: flex;
+			flex: 1 1 auto;
+			justify-content: center;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			gap: 0.3125rem;
+			margin: 0.625rem 0;
+			padding: 0.625rem 0;
+			overflow-y: auto;
 
-				li {
-					position: relative;
-					width: 5.9375rem;
-					height: 5.9375rem;
+			li {
+				position: relative;
+				width: 5.9375rem;
+				height: 5.9375rem;
 
-					img {
-						max-height: unset;
-					}
+				img {
+					max-height: unset;
+				}
 
-					span {
-						position: absolute;
-						top: 0;
-						right: 0;
-						background-color: #fff;
-						font-size: 1.5rem;
-						cursor: pointer;
-					}
+				span {
+					position: absolute;
+					top: 0;
+					right: 0;
+					background-color: #fff;
+					font-size: 1.5rem;
+					cursor: pointer;
 				}
 			}
-
 		}
 
 		&#mergeBox {

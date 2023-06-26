@@ -1,0 +1,71 @@
+section#chats(data-section="chats").active
+	img.shape.shape-2(src="@img/shapes/shape-2.png?_v=20220920212312" alt="")
+	img.shape.shape-1(src="@img/shapes/shape-1.png?_v=20220920212312" alt="")
+	header.header
+		div
+			.top-header
+				img(src="@img/logo.svg" alt="logo")
+				.event-name
+					h2 Event Name
+					span City
+			.stats
+				span
+					img(src="@img/stat-2.svg?_v=20230428135958" alt="")
+					b.m 1
+				span
+					img(src="@img/stat-3.svg?_v=20230428135958" alt="")
+					b.u 2
+				span
+					img(src="@img/stat-1.svg?_v=20230428135958" alt="")
+					b.c 3
+			.exhibitor-header(data-access="exhibitor")
+				h2 My
+					company(data-tid="1") company
+				ul.team-list.teamList.scroll-x
+					li
+						a.addToTeam
+							.team-item(style="background-color:#000")
+								span._icon-plus  
+							span.team-name Add a collegue
+					li
+						avatar(data-uid="111", style="background-image:url(https://cdn.meyou.id/pics/Rattlesnake.png); background-color: #3366FF;")
+						name(data-uid="1") Stepan
+					li
+						avatar(data-uid="111", style="background-image:url(https://cdn.meyou.id/pics/Rattlesnake.png); background-color: #3366FF;")
+						name(data-uid="1") Stepan
+					li
+						avatar(data-uid="111", style="background-image:url(https://cdn.meyou.id/pics/Rattlesnake.png); background-color: #3366FF;")
+						name(data-uid="1") Stepan
+					li
+						avatar(data-uid="111", style="background-image:url(https://cdn.meyou.id/pics/Rattlesnake.png); background-color: #3366FF;")
+						name(data-uid="1") Stepan
+					li
+						avatar(data-uid="111", style="background-image:url(https://cdn.meyou.id/pics/Rattlesnake.png); background-color: #3366FF;")
+						name(data-uid="1") Stepan
+					li
+						avatar(data-uid="111", style="background-image:url(https://cdn.meyou.id/pics/Rattlesnake.png); background-color: #3366FF;")
+						name(data-uid="1") Stepan
+					li
+						avatar(data-uid="111", style="background-image:url(https://cdn.meyou.id/pics/Rattlesnake.png); background-color: #3366FF;")
+						name(data-uid="1") Stepan
+			.visitor-header(data-access="visitor")
+				include components/_molecule
+	main
+		div
+			h2(style="display: none;") Networking team chats
+				span#chats-counter 1
+			.info-tile.info-tile_small(data-access="exhibitor")
+				span.info-tile__img._icon-eye
+				.info-tile__content
+					h3 Team sees all your chats
+				span.info-tile__icon._icon-question
+			.tabs
+				nav
+					button
+						small(data-count="1") Team follow-ups
+					button.active
+						small(data-count="0") My follow-ups
+				div
+					ul
+				div.active
+					ul 

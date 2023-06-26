@@ -2,7 +2,7 @@ popup.export#export
 	.wrapper
 		.content
 			button.popup__close._icon-close(data-close="data-close", type="button")
-			img(src="/public/expochat/img/pop-ups/popup-1.svg?_v=20220920212312", alt="")
+			img(src="@img/pop-ups/popup-1.svg?_v=20220920212312", alt="")
 			.popup__body
 				h3 Export all your chats
 				span Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi perspiciatis neque minus aliquam cumque architecto necessitatibus exercitationem a dolorum? Eveniet blanditiis maiores dolore in quam tempora delectus atque numquam iure!</span>
@@ -12,7 +12,7 @@ popup.alarm#alarm
 	.wrapper
 		.content.grey
 			button.popup__close._icon-close(data-close="data-close", type="button")
-			img(src="/public/expochat/img/pop-ups/popup-2.svg?_v=20220920212312", alt="")
+			img(src="@img/pop-ups/popup-2.svg?_v=20220920212312", alt="")
 			.popup__body
 				h3 Attention
 				.inner
@@ -25,7 +25,7 @@ popup.copy#company
 	.wrapper
 		.content
 			.popup__close._icon-close(data-close="data-close", type="button")
-			img(src="/public/expochat/img/pop-ups/popup-1.svg?_v=20220920212312", alt="")
+			img(src="@img/pop-ups/popup-1.svg?_v=20220920212312", alt="")
 			.popup__body
 				h3 Link copy to clipboard
 				button.button._fw(data-close="data-close") Ok
@@ -54,7 +54,7 @@ popup#waiting.waiting
 	.wrapper
 		.content
 			button.popup__close._icon-close(data-close="data-close" type="button")
-			img(src="/public/expochat/img/pop-ups/popup-5.svg?_v=20221201161955" alt="")
+			img(src="@img/pop-ups/popup-5.svg?_v=20221201161955" alt="")
 			.popup__body
 				p Waiting for approval.
 				<br>
@@ -66,7 +66,7 @@ popup#waiting.waiting
 						name(data-uid="111")
 						button.button._fw Decline
 
-popup#introduce.introduce.active
+popup#introduce.introduce
 	.wrapper
 		.content
 			.text To join team write your name
@@ -89,7 +89,7 @@ popup#photos.photos
 		.content
 			button.popup__close._icon-close(data-close="data-close" type="button")
 			.top-header
-				img(src="/public/expochat/img/logo.svg" alt="logo")
+				img(src="@img/logo.svg" alt="logo")
 				.event-name
 					h2
 					span
@@ -106,7 +106,7 @@ popup#photos.photos
 							small visitor
 							.qr.copyIt(data-title="")
 
-popup#photo.active
+popup#photo
 	.wrapper
 		.content
 			button.popup__close._icon-close(data-close='data-close' type='button')
@@ -175,4 +175,4 @@ popup#error.error
 				span There seems to be no internet connection.
 					br
 					|  Check the connection
-				img(src='/public/expochat/img/pop-ups/popup-3.svg' alt='')
+				img(src='@img/pop-ups/popup-3.svg' alt='')

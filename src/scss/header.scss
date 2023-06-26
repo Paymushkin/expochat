@@ -1,0 +1,150 @@
+header {
+	margin-bottom: 0.3125rem;
+	padding: 0 0.9375rem;
+}
+
+.top-header {
+	display: flex;
+	margin: 1.25rem 0;
+	z-index: 1;
+
+	img {
+		margin-right: 0.625rem;
+	}	  
+}
+
+.event-name {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3125rem;
+
+	h2 {
+		font-size: 1.25rem;
+		line-height: 1.15;
+		font-weight: 500;
+	}
+
+	span {
+		color: #585858;
+		font-size: 0.9375rem;
+		line-height: 1.1875;
+		font-weight: 500;
+	}
+}
+
+.exhibitor-header {
+	display: flex;
+	flex-direction: column;
+
+	h2 {
+		display: flex;
+		align-items: center;
+		margin-bottom: 1.25rem;
+		max-width: calc(100% - 3.75rem);
+		font-size: 1.25rem;
+		line-height: 1.15;
+		font-weight: 600;
+
+		company {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			color: #000;
+		}
+
+		b {
+			white-space: nowrap;
+		}
+
+		span {
+			color: #585858;
+			font-size: 1rem;
+			line-height: 1.1875;
+			font-weight: 500;
+		}
+	}
+}
+
+.team-list {
+	display: flex;
+	padding: 0.3125rem 0;
+	overflow-x: auto;
+
+	&::-webkit-scrollbar-track {
+		background-color: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: transparent;
+		/* цвет плашки */
+		border-radius: 20px;
+		/* закругления плашки */
+		border: 1px solid transparent;
+	}
+
+	li {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 3.75rem;
+
+		&:not(:last-child) {
+			margin-right: 1.25rem;
+		}
+
+		a,
+		div {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			cursor: pointer;
+
+			&:not(:last-child) {
+				margin-bottom: 0.625rem;
+			}
+
+			.team-item {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 3.125rem;
+				height: 3.125rem;
+				border-radius: 50%;
+				border: 0.125rem solid #fff;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+
+				span {
+					font-size: 1.875rem;
+					color: #FDD32A;
+				}
+			}
+		}
+
+		avatar {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 0.625rem;
+			width: 3.125rem;
+			height: 3.125rem;
+			color: #000;
+			border-radius: 50%;
+			border: 0.125rem solid #fff;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.team-name,
+		name {
+			display: inline-block;
+			text-align: center;
+			color: #292929;
+			font-size: 0.78125rem;
+			line-height: 1.2;
+			font-weight: 600;
+		}
+	}
+}
